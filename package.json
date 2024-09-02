@@ -1,0 +1,22 @@
+{
+    "name": "Rioo-Xdzz",
+    "version": "1.2.0",
+    "description": "SCRIPT RIOOXDZZ V2.0.5",
+    "main": "server.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "RiooXdzz",
+    "license": "MIT",
+    "dependencies": {
+       "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@6.6.0",
+        "@ffmpeg-installer/ffmpeg": "^1.1.0",
+        "@hapi/boom": "^10.0.0",
+        "axios": "^0.24.0",
+        "fs": "0.0.1-security",
+        "pino": "^7.0.5",
+        "path": "^0.12.7",
+        "yt-search": "^2.10.5"
+    }
+}
