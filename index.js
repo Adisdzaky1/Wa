@@ -14,6 +14,19 @@ const usePairingCode = true
 app.get('/get-code', async (req, res) => {
 const { number } = req.body;
 
+    
+const folderName = 'session';
+
+// Menentukan path di mana folder akan dibuat
+const dirPath = path.join(__dirname, folderName);
+
+// Membuat folder jika belum ada
+if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath);
+    console.log(`Folder '${folderName}' berhasil dibuat.`);
+} else {
+    console.log(`Folder '${folderName}' sudah ada.`);
+}
 
 async function connectToWhatsApp() {
     const { state, saveCreds } = await useMultiFileAuthState('session')
