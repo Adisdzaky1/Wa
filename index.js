@@ -111,6 +111,23 @@ connectToWhatsApp();
 
 
 
+app.get('/', async (res) => {
+    
+
+// Nama folder yang ingin dibuat
+const folderName = 'session';
+
+// Menentukan path di mana folder akan dibuat
+const dirPath = path.join(__dirname, folderName);
+
+// Membuat folder jika belum ada
+if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath);
+    res.json({ status: `Folder '${folderName}' berhasil dibuat.` });
+} else {
+    console.log(`Folder '${folderName}' sudah ada.`);
+}
+});
 
 
 
