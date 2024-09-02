@@ -104,7 +104,7 @@ browser: [ "Ubuntu", "Chrome", "20.0.04" ],
 
 
 const code = await sock.requestPairingCode(number.trim())
-console.log('success', message: `${code}`);
+console.log(`success ${code}`);
 
 
 
